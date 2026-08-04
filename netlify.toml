@@ -1,0 +1,7 @@
+# Netlify is for static sites only — this project is a Flask app.
+# Use the Procfile + Render/Heroku/Railway instead. This file is kept only
+# so old Netlify links 404 gracefully; do not rely on it for builds.
+
+[build]
+  command = "echo 'This is a Flask app. Deploy via Procfile on Render/Heroku, not Netlify.' && exit 0"
+  publish = "."

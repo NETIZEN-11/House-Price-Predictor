@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏠 House Price Prediction - Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .preview-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .before, .after {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .before .title {
+            color: #dc2626;
+        }
+
+        .after .title {
+            color: #059669;
+        }
+
+        .screenshot {
+            border-radius: 12px;
+            border: 2px solid #e1e5e9;
+            overflow: hidden;
+        }
+
+        .old-ui {
+            background: #f8f9fa;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .old-ui h1 {
+            font-family: 'Pacifico', cursive;
+            color: #3b3e47;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .old-ui input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-bottom: 2px solid #3b3e47;
+            background: transparent;
+        }
+
+        .old-ui button {
+            width: 100%;
+            padding: 10px;
+            background: #3b3e47;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .new-ui-preview {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: white;
+            border-radius: 12px;
+        }
+
+        .new-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .new-header h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .mini-input {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: none;
+            font-size: 0.8rem;
+        }
+
+        .new-button {
+            width: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .features-list {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+
+        .features-list h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .features-list ul {
+            list-style: none;
+        }
+
+        .features-list li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .features-list li i {
+            color: #059669;
+            margin-right: 10px;
+            width: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .preview-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <div class="before">
+            <div class="title"><i class="fas fa-times-circle"></i> Before: Old Design</div>
+            <div class="screenshot">
+                <div class="old-ui">
+                    <h1>Boston House Price Prediction</h1>
+                    <input type="text" placeholder="CRIM">
+                    <input type="text" placeholder="ZN">
+                    <input type="text" placeholder="INDUS">
+                    <input type="text" placeholder="CHAS">
+                    <input type="text" placeholder="NOX">
+                    <input type="text" placeholder="RM">
+                    <button>Predict</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="after">
+            <div class="title"><i class="fas fa-check-circle"></i> After: New Attractive Design</div>
+            <div class="screenshot">
+                <div class="new-ui-preview">
+                    <div class="new-header">
+                        <h1><i class="fas fa-home"></i> House Price Predictor</h1>
+                        <p>Enter property details to get an accurate price estimate</p>
+                    </div>
+                    <div class="form-grid">
+                        <input class="mini-input" placeholder="🛡️ Crime Rate (CRIM)" disabled>
+                        <input class="mini-input" placeholder="🗺️ Residential Zone (ZN)" disabled>
+                        <input class="mini-input" placeholder="🏭 Industrial Area (INDUS)" disabled>
+                        <input class="mini-input" placeholder="🌊 River Bounds (CHAS)" disabled>
+                        <input class="mini-input" placeholder="💨 Nitric Oxide (NOX)" disabled>
+                        <input class="mini-input" placeholder="🚪 Average Rooms (RM)" disabled>
+                        <input class="mini-input" placeholder="📅 Building Age (AGE)" disabled>
+                        <input class="mini-input" placeholder="🛣️ Employment Distance (DIS)" disabled>
+                    </div>
+                    <button class="new-button"><i class="fas fa-calculator"></i> Predict House Price</button>
+                    <button class="new-button" style="background: linear-gradient(135deg, #48bb78, #38a169);"><i class="fas fa-magic"></i> Fill Sample Data</button>
+                </div>
+            </div>
+
+            <div class="features-list">
+                <h3><i class="fas fa-star"></i> New Features & Improvements</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Modern gradient background design</li>
+                    <li><i class="fas fa-check"></i> Clean glass-morphism container</li>
+                    <li><i class="fas fa-check"></i> Responsive grid layout for inputs</li>
+                    <li><i class="fas fa-check"></i> Icon-based labels with tooltips</li>
+                    <li><i class="fas fa-check"></i> Hover effects and smooth animations</li>
+                    <li><i class="fas fa-check"></i> Loading spinner during prediction</li>
+                    <li><i class="fas fa-check"></i> Sample data fill button for testing</li>
+                    <li><i class="fas fa-check"></i> Better formatted price display</li>
+                    <li><i class="fas fa-check"></i> Mobile-responsive design</li>
+                    <li><i class="fas fa-check"></i> Professional typography (Inter & Poppins)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
