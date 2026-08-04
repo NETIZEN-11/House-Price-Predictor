@@ -1,16 +1,11 @@
 services:
   - type: web
-    name: house-price-prediction
-    runtime: python
-    plan: free
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:app --bind 0.0.0.0:$PORT --workers 2 --timeout 60"
+    name: house-price-predictor
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
     envVars:
       - key: PYTHON_VERSION
-        value: 3.11.9
-      - key: FLASK_SECRET_KEY
-        generateValue: true
-      - key: FLASK_DEBUG
-        value: "0"
-    healthCheckPath: /health
-    autoDeploy: true
+        value: 3.11.0
+      - key: PORT
+        value: 5000
